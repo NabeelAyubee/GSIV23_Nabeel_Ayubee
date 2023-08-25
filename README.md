@@ -1,46 +1,156 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project GSIV23_Nabeel_Ayubee  
 
-## Available Scripts
+A react typescript demo project based on movies webapp for all upcoming movies.
+Implemented 
 
-In the project directory, you can run:
+## Project Technicalities
 
-### `npm start`
+- ### Redux Implementation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project utilizes Redux to efficiently manage the state of the application.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ### Throttling Search
 
-### `npm test`
+To enhance user experience and prevent excessive API requests, the search functionality is equipped with throttling. This ensures that API calls for searching movies are made at a controlled rate, avoiding overloading the server and optimizing performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ### Infinite Scrolling
 
-### `npm run build`
+The project employs an infinite scrolling mechanism for an improved user interface. When the user reaches the end of the current list of movies, the application dynamically loads additional content, creating a seamless browsing experience without the need for manual pagination.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ### Storybook for Common Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project has incorporated Storybook, a development environment for UI components. This allows for isolating and testing common components independently, facilitating efficient development and ensuring component reusability and consistency.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ## ℹ️ Test Cases
 
-### `npm run eject`
+Currently, the project does not have test cases implemented as I am not very familiar of the test cases at this point of time.
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install the project with yarn.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### ℹ️ Node Version should be >v18
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Clone the project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+    git clone https://github.com/NabeelAyubee/GSIV23_Nabeel_Ayubee.git  
+```
 
-## Learn More
+Go to the project directory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+    cd GSIV_Nabeel_Ayubee
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install dependencies
+
+```bash
+  yarn install
+```
+
+Start the server
+
+```bash
+  yarn start
+```
+To run the storybook
+
+```bash
+  yarn storybook
+```
+
+
+    
+# Documentation
+
+Source code is present under /src folder
+
+### Project Structure
+
+#### Navigate to `/src` folder for code source :
+
+- **components:** This directory contains common components used in the application.
+
+- **components/stories** The file responsible for rendering the Storybook.
+
+- **css:** The global CSS file `index.css` is located here for styling.
+
+- **hooks:** All custom hooks and API function implementations can be found in this directory.
+
+- **pages:** This directory contains the various screens of the application.
+
+- **redux:** Contains the Redux store and reducer implementations for state management.
+
+- **App.tsx:** The main component that acts as the entry point to your application.
+
+- **index.tsx:** The file responsible for rendering the React app.
+
+## API Reference
+Took all API reference from https://developer.themoviedb.org/docs/getting-started
+
+Login to the above link and take API KEY which can be used as a factor of Authorization.
+ 
+#### Get all Movie List
+
+```http
+  GET /api.themoviedb.org/3/movie/upcoming
+```
+
+| Parameter  | Type      | Description          |
+| :--------  | :-------  | :--------------------|
+| `language` | `string` | **Optional**. en-US |
+
+| Headers           | Type     | Description                         |
+| :--------         | :------- | :-------------------------          |
+| `Authorization`   | `string` | **Required**. Bearer `YOUR_API_KEY` |
+
+#### Get Movie Details
+
+```http
+  GET /api.themoviedb.org/3/movie/{id}
+```
+
+| Parameter  | Type      | Description          |
+| :--------  | :-------  | :--------------------|
+| `language` | `string` | **Optional**. en-US |
+
+| Headers           | Type     | Description                         |
+| :--------         | :------- | :-------------------------          |
+| `Authorization`   | `string` | **Required**. Bearer `YOUR_API_KEY` |
+
+
+#### Search Movie
+
+```http
+  GET /api.themoviedb.org/3/search/movie
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `query`      | `string` | **Required**. Name of movie |
+
+| Headers           | Type     | Description                         |
+| :--------         | :------- | :-------------------------          |
+| `Authorization`   | `string` | **Required**. Bearer `YOUR_API_KEY` |
+
+## Demo
+
+https://gsiv23-nabeel-demo.web.app/movies
+
+## Roadmap
+
+- Additional browser support
+
+- Add more integrations
+
+
+## Tech Stack
+
+React, Redux, Typescript, CSS, Storybook
+
+
+## Author
+
+- [@NabeelAyubee](https://www.github.com/NabeelAyubee)
+
