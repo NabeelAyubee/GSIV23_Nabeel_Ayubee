@@ -51,10 +51,12 @@ const MovieList: React.FC = () => {
     if (isFetching) {
       fetchMore();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFetching]);
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   var fetch: any;

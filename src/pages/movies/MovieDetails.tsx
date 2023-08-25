@@ -33,6 +33,7 @@ const MovieDetails: React.FC = () => {
       }
     };
     fetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!data || !year || !runtime) {

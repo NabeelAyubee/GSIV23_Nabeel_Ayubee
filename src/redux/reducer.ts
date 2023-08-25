@@ -33,7 +33,9 @@ const search_results = createSlice({
 export const { setMovies, setTotalPage, setCurrentPage } = all_movies.actions;
 export const { setResults } = search_results.actions;
 
-export default {
+const Combinereducers = {
   all_movies: all_movies.reducer,
   search_results: search_results.reducer,
 };
+
+export default Combinereducers;
