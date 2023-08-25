@@ -1,13 +1,10 @@
 import React from "react";
 import Image from "../Image";
-// import CardText from "../CardText";
-// import Paragraph from "../Paragraph";
 import CardContainer from "../CardContainer";
 import CardHeader from "../CardHeader";
 import Header from "../Header";
 import Paragraph from "../Paragraph";
 import { useNavigate } from "react-router-dom";
-// import CardHeader from "../CardHeader";
 interface GreetingProps {
   onClick?: () => void;
   config?: any;
