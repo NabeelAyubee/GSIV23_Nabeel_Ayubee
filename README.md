@@ -1,8 +1,7 @@
 
 # Project GSIV23_Nabeel_Ayubee  
 
-A react typescript demo project based on movies webapp for all upcoming movies.
-Implemented 
+A react typescript demo project based on movies webapp for all upcoming movies. 
 
 ## Project Technicalities
 
